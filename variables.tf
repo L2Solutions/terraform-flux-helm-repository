@@ -1,16 +1,16 @@
 variable "name" {
-  description = "Name of the GitRepository resource"
+  description = "Name of the HelmRepository resource"
   type        = string
 }
 
 variable "namespace" {
-  description = "Namespace location to create the GitRepository"
+  description = "Namespace location to create the HelmRepository"
   default     = "flux-system"
   type        = string
 }
 
 variable "url" {
-  description = "URL of the git repository"
+  description = "URL of the helm repository"
   type        = string
 }
 
