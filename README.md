@@ -31,9 +31,9 @@ No modules.
 | <a name="input_credentials"></a> [credentials](#input\_credentials) | Username and password for basic auth | <pre>object({<br>    username = string<br>    password = string<br>  })</pre> | `null` | no |
 | <a name="input_existing_secret"></a> [existing\_secret](#input\_existing\_secret) | Existing ssh/https secret in the namespace for auth | `string` | `null` | no |
 | <a name="input_interval"></a> [interval](#input\_interval) | How frequently to pull changes from the source repository | `string` | `"10m0s"` | no |
-| <a name="input_name"></a> [name](#input\_name) | Name of the GitRepository resource | `string` | n/a | yes |
-| <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace location to create the GitRepository | `string` | `"flux-system"` | no |
-| <a name="input_url"></a> [url](#input\_url) | URL of the git repository | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | Name of the HelmRepository resource | `string` | n/a | yes |
+| <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace location to create the HelmRepository | `string` | `"flux-system"` | no |
+| <a name="input_url"></a> [url](#input\_url) | URL of the helm repository | `string` | n/a | yes |
 
 ## Outputs
 
