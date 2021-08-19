@@ -1,17 +1,15 @@
 provider "kubernetes" {
   config_path    = "~/.kube/config"
   config_context = "k3d-tftest"
-}
-
-provider "kubernetes-alpha" {
-  config_path    = "~/.kube/config"
-  config_context = "k3d-tftest"
+  experiments {
+    manifest_resource = true
+  }
 }
 
 module "flux-install" {
   count   = 1
   source  = "L2Solutions/install/flux"
-  version = "0.0.25"
+  version = "0.0.27"
 }
 
 # Set to true after flux-install. GitRepository CRD need to be created before the repo instances may be created.
