@@ -8,7 +8,7 @@ provider "kubernetes" {
 
 module "flux-install" {
   count   = 1
-  source  = "L2Solutions/install/flux"
+  source  = "OmniTeqSource/install/flux"
   version = "0.0.27"
 }
 
