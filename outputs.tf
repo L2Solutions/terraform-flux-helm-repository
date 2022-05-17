@@ -9,7 +9,7 @@ output "name" {
 
 output "namespace" {
   description = "Namespace the object was applied to"
-  values      = local.namespace
+  value       = local.namespace
 }
 
 output "kind" {
