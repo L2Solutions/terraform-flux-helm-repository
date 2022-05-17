@@ -60,5 +60,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_manifest"></a> [manifest](#output\_manifest) | n/a |
+| <a name="output_name"></a> [name](#output\_name) | Name of the repository resource with prefix(if enabled) |
 | <a name="output_secret_name"></a> [secret\_name](#output\_secret\_name) | Auth secret name |
 <!-- END_TF_DOCS -->
