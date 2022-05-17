@@ -3,20 +3,19 @@ provider "kubernetes" {
   config_context = "k3d-tftest"
 }
 
-module "flux-install" {
-  count   = 1
-  source  = "OmniTeqSource/install/flux"
-  version = "0.1.6"
+provider "helm" {
+  kubernetes {
+    config_path    = "~/.kube/config"
+    config_context = "k3d-tftest"
+  }
 }
 
-# Set to true after flux-install. GitRepository CRD need to be created before the repo instances may be created.
-locals {
-  install_complete = false
+module "flux-install" {
+  source  = "OmniTeqSource/install/flux"
+  version = "0.2.0"
 }
 
 module "helm-repository-basic" {
-  count = local.install_complete ? 1 : 0
-
   source = "../../"
 
   name = "basic"
@@ -27,8 +26,6 @@ module "helm-repository-basic" {
 }
 
 module "helm-repository-auth" {
-  count = local.install_complete ? 1 : 0
-
   source = "../../"
 
   name     = "auth"

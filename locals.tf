@@ -1,5 +1,5 @@
 locals {
-  name      = var.name
+  name      = var.random_suffix ? join("-", [var.name, random_string.this.id]) : var.name
   namespace = var.namespace
   url       = var.url
   interval  = var.interval
@@ -13,7 +13,7 @@ locals {
 }
 
 locals {
-  repository = {
+  manifest = {
     apiVersion = "source.toolkit.fluxcd.io/v1beta1"
     kind       = "HelmRepository"
     metadata = {
