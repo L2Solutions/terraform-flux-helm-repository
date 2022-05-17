@@ -34,3 +34,9 @@ variable "credentials" {
     password = string
   })
 }
+
+variable "random_suffix" {
+  description = "Add a random alpha-numeric suffix to resource names(prevents helm release collision)"
+  default     = true
+  type        = bool
+}
