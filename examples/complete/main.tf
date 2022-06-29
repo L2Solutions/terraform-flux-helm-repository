@@ -11,8 +11,8 @@ provider "helm" {
 }
 
 module "flux-install" {
-  source  = "OmniTeqSource/install/flux"
-  version = "0.2.0"
+  source  = "skyfjell/install/flux"
+  version = "1.0.1"
 }
 
 module "helm-repository-basic" {
